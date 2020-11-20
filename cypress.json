@@ -5,6 +5,9 @@
     "user": {
         "email": "gscode@gscode.com",
         "password": "12345678"
+    },
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "cypress/reports/junit-[hash].xml"
     }
 }
-
