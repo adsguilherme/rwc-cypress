@@ -25,3 +25,12 @@ steps:
 - script: npm run cy:run:chrome
   displayName: 'Run tests on Chrome'
   continueOnError: true
+  
+- task: PublishTestResults@2
+  displayName: 'Exibindo resultados dos testes'
+  inputs:
+    testResultsFiles: '**/junit-*.xml'
+    mergeTestResults: true
+    testRunTitle: 'Executando no pipeline da Azure'
+  continueOnError: true
+
